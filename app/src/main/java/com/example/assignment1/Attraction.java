@@ -10,8 +10,9 @@ public class Attraction {
     private int rating; //1-5
     private double entryFee;
     private String visitDate; //yyyy-mm-dd
-    private String duration; //in housr
+    private int duration; //in housr
     private boolean isVisited;
+    private String visitTime; //hh:mm
     private boolean isFavorite;
     private String notes;
 
@@ -78,12 +79,20 @@ public class Attraction {
         isVisited = visited;
     }
 
-    public String getDuration() {
+    public int getDuration() {
         return duration;
     }
 
-    public void setDuration(String duration) {
+    public void setDuration(int duration) {
         this.duration = duration;
+    }
+
+    public String getVisitTime(){
+        return visitTime;
+    }
+
+    public void setVisitTime(String visitTime) {
+        this.visitTime = visitTime;
     }
 
     public String getVisitDate() {

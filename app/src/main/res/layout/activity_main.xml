@@ -1,29 +1,47 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="16dp">
+    android:layout_height="match_parent">
 
-    <SearchView
-        android:id="@+id/search_view"
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:background="@drawable/background">
+
+        <SearchView
+            android:id="@+id/search_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:queryHint="Search attractions..." />
+
+        <TextView
+            android:id="@+id/empty_list_message"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:text="No attractions yet. Click + to add one!"
+            android:textSize="18sp"
+            android:visibility="gone" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="16dp" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_add_attraction"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:queryHint="Search attractions..." />
-
-    <TextView
-        android:id="@+id/empty_list_message"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center"
-        android:text="No attractions yet. Click + to add one!"
+        android:layout_gravity="bottom"
+        android:layout_margin="16dp"
+        android:text="Add New Attraction"
         android:textSize="18sp"
-        android:visibility="gone" />
+        android:backgroundTint="@color/Buttons"
+        android:fontFamily="@font/cairo_medium"/>
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recycler_view"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="16dp" />
-
-</LinearLayout>
+</FrameLayout>

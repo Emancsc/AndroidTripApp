@@ -1,134 +1,115 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="vertical"
-    android:padding="12dp"
-    android:background="@drawable/background"
-    android:layout_margin="8dp">
-
-    <TextView
-        android:id="@+id/attraction_name"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        android:fontFamily="@font/cairo_medium"
-        android:textColor="@color/white"
-        android:text="Attraction Name" />
-
-    <TextView
-        android:id="@+id/attraction_location"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="18sp"
-        android:text="Location"
-        android:fontFamily="@font/cairo_medium"
-        android:textColor="@color/white"
-        android:layout_marginTop="4dp" />
-
-    <TextView
-        android:id="@+id/attraction_type"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="18sp"
-        android:text="Type"
-        android:fontFamily="@font/cairo_medium"
-        android:textColor="@color/white"
-        android:padding="4dp"
-        android:background="@color/Buttons"
-        android:layout_marginTop="4dp" />
-
-    <TextView
-        android:id="@+id/attraction_date"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="18sp"
-        android:fontFamily="@font/cairo_medium"
-        android:textColor="@color/white"
-        android:text="Date"
-        android:layout_marginTop="4dp" />
-
-    <TextView
-        android:id="@+id/attraction_time"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="18sp"
-        android:text="Time"
-        android:fontFamily="@font/cairo_medium"
-        android:textColor="@color/white"
-        android:layout_marginTop="4dp" />
-
-    <TextView
-        android:id="@+id/attraction_fee"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="18sp"
-        android:text="Fee"
-        android:fontFamily="@font/cairo_medium"
-        android:textColor="@color/white"
-        android:layout_marginTop="4dp" />
-
-    <TextView
-        android:id="@+id/attraction_rating"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textSize="18sp"
-        android:text="Rating"
-        android:fontFamily="@font/cairo_medium"
-        android:textColor="@color/white"
-        android:layout_marginTop="4dp" />
-
-    <CheckBox
-        android:id="@+id/checkbox_visited"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Visited"
-        android:textSize="18sp"
-        android:fontFamily="@font/cairo_medium"
-        android:textColor="@color/white"
-        android:layout_marginTop="8dp" />
+    android:layout_margin="8dp"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?android:attr/selectableItemBackground"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="4dp"
+    app:cardBackgroundColor="#57578A">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginTop="8dp">
+        android:orientation="vertical"
+        android:padding="16dp">
 
-        <Button
-            android:id="@+id/btn_edit"
-            android:layout_width="0dp"
+        <!-- Name -->
+        <TextView
+            android:id="@+id/attraction_name"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Edit"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:fontFamily="@font/cairo_medium"
+            android:textColor="@color/white"
+            android:text="Attraction Name" />
+
+        <!-- Location with icon -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="8dp"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" "
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/attraction_location"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="16sp"
+                android:text="Location"
+                android:fontFamily="@font/cairo_medium"
+                android:textColor="#B2EBF2" />
+        </LinearLayout>
+
+        <!-- Type and Date in one row -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="8dp">
+
+            <TextView
+                android:id="@+id/attraction_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:text="Type"
+                android:fontFamily="@font/cairo_medium"
+                android:textColor="@color/white"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:paddingTop="4dp"
+                android:paddingBottom="4dp"
+                android:background="@color/Buttons" />
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/attraction_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:text="Date"
+                android:fontFamily="@font/cairo_medium"
+                android:textColor="#B2EBF2" />
+        </LinearLayout>
+
+        <!-- Rating -->
+        <TextView
+            android:id="@+id/attraction_rating"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:textSize="18sp"
-            android:fontFamily="@font/cairo_medium"
-            android:backgroundTint="@color/Buttons"
-            android:layout_marginEnd="4dp" />
+            android:text="⭐⭐⭐⭐⭐"
+            android:layout_marginTop="8dp" />
 
-        <Button
-            android:id="@+id/btn_delete"
-            android:layout_width="0dp"
+        <!-- Favorite indicator -->
+        <TextView
+            android:id="@+id/tv_favorite_indicator"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:textSize="18sp"
-            android:text="Delete"
+            android:text="⭐ Favorite"
+            android:textSize="14sp"
             android:fontFamily="@font/cairo_medium"
-            android:backgroundTint="@color/Buttons"
-            android:layout_marginStart="4dp"
-            android:layout_marginEnd="4dp" />
-
-        <Button
-            android:id="@+id/btn_favorite"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="★ Fav"
-            android:textSize="20sp"
-            android:fontFamily="@font/cairo_medium"
-            android:backgroundTint="@color/Buttons"
-            android:layout_marginStart="4dp" />
+            android:textColor="#FFD700"
+            android:layout_marginTop="4dp"
+            android:visibility="gone" />
 
     </LinearLayout>
 
-</LinearLayout>
+</androidx.cardview.widget.CardView>

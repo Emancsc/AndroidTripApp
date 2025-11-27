@@ -1,67 +1,119 @@
 package com.example.assignment1;
 
+import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
-
-import androidx.activity.EdgeToEdge;
+import android.widget.Button;
+import android.widget.SearchView;
+import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+import java.util.List;
 
-public class MainActivity extends AppCompatActivity {
-    private static final String TAG = "MainActivity";
+public class MainActivity extends AppCompatActivity implements AttractionAdapter.OnAttractionClickListener {
+
+    private RecyclerView recyclerView;
+    private AttractionAdapter adapter;
+    private SearchView searchView;
+    private TextView emptyMessage;
+    private Button btnAdd;
+
+    private SharedPreferencesManager manager;
+    private List<Attraction> allAttractions;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
+
+        // Initialize manager
+        manager = new SharedPreferencesManager(this);
+
+        // Find views
+        recyclerView = findViewById(R.id.recycler_view);
+        searchView = findViewById(R.id.search_view);
+        emptyMessage = findViewById(R.id.empty_list_message);
+        btnAdd = findViewById(R.id.btn_add_attraction);
+
+        // Check if button exists
+        if (btnAdd == null) {
+            android.util.Log.e("MainActivity", "Button not found! Check your XML");
+        }
+
+        // Setup RecyclerView
+        setupRecyclerView();
+
+        // Setup SearchView
+        setupSearchView();
+
+        // Setup Add Button
+        setupAddButton();
+
+        // Load attractions
+        loadAttractions();
+    }
+
+    private void setupRecyclerView() {
+        recyclerView.setLayoutManager(new LinearLayoutManager(this));
+        allAttractions = manager.getAllAttractions();
+        adapter = new AttractionAdapter(allAttractions, this, this);
+        recyclerView.setAdapter(adapter);
+    }
+
+    private void setupSearchView() {
+        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+            @Override
+            public boolean onQueryTextSubmit(String query) {
+                return false;
+            }
+
+            @Override
+            public boolean onQueryTextChange(String newText) {
+                if (newText.isEmpty()) {
+                    adapter.updateList(allAttractions);
+                } else {
+                    List<Attraction> filtered = manager.searchAttractions(newText);
+                    adapter.updateList(filtered);
+                }
+                return true;
+            }
         });
-        Log.d(TAG,"On OnCreate() State");
     }
 
-
-    public void onStart(){
-        super.onStart();
-        Log.d(TAG,"On OnStart() State");
-
+    private void setupAddButton() {
+        if (btnAdd != null) {
+            btnAdd.setOnClickListener(v -> {
+                android.util.Log.d("MainActivity", "Add button clicked!");
+                Intent intent = new Intent(MainActivity.this, AddAttractionActivity.class);
+                startActivity(intent);
+            });
+        }
     }
 
-    public void onResume(){
+    private void loadAttractions() {
+        allAttractions = manager.getAllAttractions();
+
+        if (allAttractions.isEmpty()) {
+            emptyMessage.setVisibility(android.view.View.VISIBLE);
+            recyclerView.setVisibility(android.view.View.GONE);
+        } else {
+            emptyMessage.setVisibility(android.view.View.GONE);
+            recyclerView.setVisibility(android.view.View.VISIBLE);
+            adapter.updateList(allAttractions);
+        }
+    }
+
+    // Handle item click - open details activity
+    @Override
+    public void onAttractionClick(Attraction attraction) {
+        Intent intent = new Intent(MainActivity.this, AttractionDetailsActivity.class);
+        intent.putExtra("attraction_id", attraction.getAttractionId());
+        startActivity(intent);
+    }
+
+    @Override
+    protected void onResume() {
         super.onResume();
-        Log.d(TAG,"On onResume() State");
-
+        loadAttractions();
     }
-
-
-    public void onPause(){
-        super.onPause();
-        Log.d(TAG,"On onPause() State");
-
-    }
-
-    public void onStop(){
-        super.onStop();
-        Log.d(TAG,"On onStop() State");
-
-    }
-
-    public void onDestroy(){
-        super.onDestroy();
-        Log.d(TAG,"On onDestroy() State");
-
-    }
-
-
-
-
-
-
-
-
 }
