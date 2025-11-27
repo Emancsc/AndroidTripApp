@@ -1,6 +1,360 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:id="@+id/add"
+    android:background="@drawable/background">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <!-- Name -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Attraction Name"
+            android:textSize="20sp"
+            android:fontFamily="@font/cairo_medium"
+            android:textColor="@color/white"
+            android:letterSpacing="0.01"
+            android:layout_marginBottom="8dp" />
+
+        <EditText
+            android:id="@+id/et_name"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:hint="Enter name"
+            android:fontFamily="@font/cairo_medium"
+            android:textColor="@color/white"
+            android:textColorHint="#B2EBF2"
+            android:textSize="20sp"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:layout_marginBottom="20dp" />
+
+        <!-- Location -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Location"
+            android:textSize="20sp"
+            android:fontFamily="@font/cairo_medium"
+            android:textColor="@color/white"
+            android:letterSpacing="0.01"
+            android:layout_marginBottom="8dp" />
+
+        <EditText
+            android:id="@+id/et_location"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:hint="Enter location"
+            android:fontFamily="@font/cairo_medium"
+            android:textColor="@color/white"
+            android:textColorHint="#B2EBF2"
+            android:textSize="20sp"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:layout_marginBottom="20dp" />
+
+        <!-- Type -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Type"
+            android:textSize="20sp"
+            android:fontFamily="@font/cairo_medium"
+            android:textColor="@color/white"
+            android:letterSpacing="0.01"
+            android:layout_marginBottom="10dp" />
+
+        <Spinner
+            android:id="@+id/spinner_type"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:fontFamily="@font/cairo_medium"
+            android:layout_marginBottom="20dp" />
+
+        <!-- Entry Fee -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Entry Fee ($)"
+            android:fontFamily="@font/cairo_medium"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:letterSpacing="0.01"
+            android:layout_marginBottom="8dp" />
+
+        <EditText
+            android:id="@+id/et_fee"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:hint="Enter fee"
+            android:fontFamily="@font/cairo_medium"
+            android:textColor="@color/white"
+            android:textColorHint="#B2EBF2"
+            android:textSize="20sp"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:inputType="numberDecimal"
+            android:layout_marginBottom="20dp" />
+
+        <!-- Date -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Visit Date"
+            android:fontFamily="@font/cairo_medium"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:letterSpacing="0.01"
+            android:layout_marginBottom="8dp" />
+
+        <Button
+            android:id="@+id/btn_select_date"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Select Date"
+            android:fontFamily="@font/cairo_medium"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textAllCaps="false"
+            android:backgroundTint="@color/Buttons"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:id="@+id/tv_selected_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="No date selected"
+            android:fontFamily="@font/cairo_medium"
+            android:textColor="#B2EBF2"
+            android:textSize="20sp"
+            android:layout_marginBottom="20dp" />
+
+        <!-- Time -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Visit Time"
+            android:fontFamily="@font/cairo_medium"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:letterSpacing="0.01"
+            android:layout_marginBottom="8dp" />
+
+        <Button
+            android:id="@+id/btn_select_time"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Select Time"
+            android:fontFamily="@font/cairo_medium"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textAllCaps="false"
+            android:backgroundTint="@color/Buttons"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:id="@+id/tv_selected_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="No time selected"
+            android:fontFamily="@font/cairo_medium"
+            android:textColor="#B2EBF2"
+            android:textSize="20sp"
+            android:layout_marginBottom="20dp" />
+
+        <!-- Duration -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Duration (hours)"
+            android:fontFamily="@font/cairo_medium"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:letterSpacing="0.01"
+            android:layout_marginBottom="8dp" />
+
+        <EditText
+            android:id="@+id/et_duration"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:hint="Enter duration"
+            android:fontFamily="@font/cairo_medium"
+            android:textColor="@color/white"
+            android:textColorHint="#B2EBF2"
+            android:textSize="20sp"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:inputType="number"
+            android:layout_marginBottom="20dp" />
+
+        <!-- Rating -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rating"
+            android:fontFamily="@font/cairo_medium"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:letterSpacing="0.01"
+            android:layout_marginBottom="12dp" />
+
+        <RadioGroup
+            android:id="@+id/rg_rating"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="20dp">
+
+            <RadioButton
+                android:id="@+id/rb_1star"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="⭐"
+                android:textSize="20sp"
+                android:fontFamily="@font/cairo_medium"
+                android:textColor="@color/white"
+                />
+
+            <RadioButton
+                android:id="@+id/rb_2star"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="⭐⭐"
+                android:textSize="20sp"
+                android:fontFamily="@font/cairo_medium"
+                android:textColor="@color/white"
+                 />
+
+            <RadioButton
+                android:id="@+id/rb_3star"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="⭐⭐⭐"
+                android:textSize="20sp"
+                android:fontFamily="@font/cairo_medium"
+                android:textColor="@color/white"
+                 />
+
+            <RadioButton
+                android:id="@+id/rb_4star"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="⭐⭐⭐⭐"
+                android:textSize="20sp"
+                android:fontFamily="@font/cairo_medium"
+                android:textColor="@color/white"
+                 />
+
+            <RadioButton
+                android:id="@+id/rb_5star"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="⭐⭐⭐⭐⭐"
+                android:textSize="20sp"
+                android:fontFamily="sans-serif"
+                android:textColor="@color/white"
+                 />
+
+        </RadioGroup>
+
+        <!-- Checkboxes -->
+        <CheckBox
+            android:id="@+id/cb_favorite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mark as Favorite"
+            android:fontFamily="@font/cairo_medium"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+
+            android:layout_marginBottom="12dp" />
+
+        <CheckBox
+            android:id="@+id/cb_visited"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Already Visited"
+            android:fontFamily="@font/cairo_medium"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+
+            android:layout_marginBottom="20dp" />
+
+        <!-- Notes -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Notes"
+            android:fontFamily="@font/cairo_medium"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:letterSpacing="0.01"
+            android:layout_marginBottom="8dp" />
+
+        <EditText
+            android:id="@+id/et_notes"
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:hint="Enter notes"
+            android:fontFamily="@font/cairo_medium"
+            android:textColor="@color/white"
+            android:textColorHint="#B2EBF2"
+            android:textSize="20sp"
+            android:padding="12dp"
+            android:gravity="top|start"
+            android:layout_marginBottom="24dp" />
+
+        <!-- Buttons -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="8dp">
+
+            <Button
+                android:id="@+id/btn_save"
+                android:layout_width="0dp"
+                android:layout_height="52dp"
+                android:layout_weight="1"
+                android:text="Save"
+                android:layout_marginEnd="8dp"
+                android:fontFamily="@font/cairo_medium"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:backgroundTint="@color/Buttons"
+                android:textAllCaps="false"
+                />
+
+            <Button
+                android:id="@+id/btn_cancel"
+                android:layout_width="0dp"
+                android:layout_height="52dp"
+                android:layout_weight="1"
+                android:text="Cancel"
+                android:layout_marginStart="8dp"
+                android:fontFamily="@font/cairo_medium"
+                android:textColor="@color/white"
+                android:backgroundTint="@color/Buttons"
+                android:textSize="20sp"
+                android:textAllCaps="false"
+            />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

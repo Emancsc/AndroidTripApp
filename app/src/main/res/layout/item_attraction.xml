@@ -1,6 +1,134 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="12dp"
+    android:background="@drawable/background"
+    android:layout_margin="8dp">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:id="@+id/attraction_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:fontFamily="@font/cairo_medium"
+        android:textColor="@color/white"
+        android:text="Attraction Name" />
+
+    <TextView
+        android:id="@+id/attraction_location"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:text="Location"
+        android:fontFamily="@font/cairo_medium"
+        android:textColor="@color/white"
+        android:layout_marginTop="4dp" />
+
+    <TextView
+        android:id="@+id/attraction_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:text="Type"
+        android:fontFamily="@font/cairo_medium"
+        android:textColor="@color/white"
+        android:padding="4dp"
+        android:background="@color/Buttons"
+        android:layout_marginTop="4dp" />
+
+    <TextView
+        android:id="@+id/attraction_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:fontFamily="@font/cairo_medium"
+        android:textColor="@color/white"
+        android:text="Date"
+        android:layout_marginTop="4dp" />
+
+    <TextView
+        android:id="@+id/attraction_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:text="Time"
+        android:fontFamily="@font/cairo_medium"
+        android:textColor="@color/white"
+        android:layout_marginTop="4dp" />
+
+    <TextView
+        android:id="@+id/attraction_fee"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:text="Fee"
+        android:fontFamily="@font/cairo_medium"
+        android:textColor="@color/white"
+        android:layout_marginTop="4dp" />
+
+    <TextView
+        android:id="@+id/attraction_rating"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:text="Rating"
+        android:fontFamily="@font/cairo_medium"
+        android:textColor="@color/white"
+        android:layout_marginTop="4dp" />
+
+    <CheckBox
+        android:id="@+id/checkbox_visited"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Visited"
+        android:textSize="18sp"
+        android:fontFamily="@font/cairo_medium"
+        android:textColor="@color/white"
+        android:layout_marginTop="8dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="8dp">
+
+        <Button
+            android:id="@+id/btn_edit"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Edit"
+            android:textSize="18sp"
+            android:fontFamily="@font/cairo_medium"
+            android:backgroundTint="@color/Buttons"
+            android:layout_marginEnd="4dp" />
+
+        <Button
+            android:id="@+id/btn_delete"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="18sp"
+            android:text="Delete"
+            android:fontFamily="@font/cairo_medium"
+            android:backgroundTint="@color/Buttons"
+            android:layout_marginStart="4dp"
+            android:layout_marginEnd="4dp" />
+
+        <Button
+            android:id="@+id/btn_favorite"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="★ Fav"
+            android:textSize="20sp"
+            android:fontFamily="@font/cairo_medium"
+            android:backgroundTint="@color/Buttons"
+            android:layout_marginStart="4dp" />
+
+    </LinearLayout>
+
+</LinearLayout>
