@@ -66,7 +66,7 @@ public class AddAttractionActivity extends AppCompatActivity {
 
     // Setup spinner with attraction types
     private void setupSpinner() {
-        String[] types = {"Museum", "Park", "Restaurant", "Monument", "Beach", "Church", "Theater","stadium"};
+        String[] types = {"Museum", "Park", "Restaurant", "Monument","mosque","Beach", "Church", "Theater","stadium"};
         android.widget.ArrayAdapter<String> adapter = new android.widget.ArrayAdapter<>(
                 this, android.R.layout.simple_spinner_item, types);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
