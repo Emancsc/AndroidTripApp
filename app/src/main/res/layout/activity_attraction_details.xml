@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <!-- Header with name -->
+        <TextView
+            android:id="@+id/tv_detail_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:fontFamily="@font/cairo_medium"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:layout_marginBottom="20dp"
+            android:text="Attraction Name" />
+
+        <!-- Location Section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="#33FFFFFF"
+            android:padding="12dp"
+            android:layout_marginBottom="12dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Location:"
+                android:textSize="18sp"
+                android:fontFamily="@font/cairo_medium"
+                android:textColor="@color/white"
+                android:layout_marginEnd="8dp" />
+
+            <TextView
+                android:id="@+id/tv_detail_location"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="18sp"
+                android:fontFamily="@font/cairo_medium"
+                android:textColor="#B2EBF2"
+                android:text="Location" />
+        </LinearLayout>
+
+        <!-- Type Section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="#33FFFFFF"
+            android:padding="12dp"
+            android:layout_marginBottom="12dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Type:"
+                android:textSize="18sp"
+                android:fontFamily="@font/cairo_medium"
+                android:textColor="@color/white"
+                android:layout_marginEnd="8dp" />
+
+            <TextView
+                android:id="@+id/tv_detail_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="18sp"
+                android:fontFamily="@font/cairo_medium"
+                android:textColor="#B2EBF2"
+                android:text="Type" />
+        </LinearLayout>
+
+        <!-- Date & Time Section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="#33FFFFFF"
+            android:padding="12dp"
+            android:layout_marginBottom="12dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Date:"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/cairo_medium"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/tv_detail_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/cairo_medium"
+                    android:textColor="#B2EBF2"
+                    android:text="Date" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" Time:"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/cairo_medium"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/tv_detail_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/cairo_medium"
+                    android:textColor="#B2EBF2"
+                    android:text="Time" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Fee & Duration Section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="#33FFFFFF"
+            android:padding="12dp"
+            android:layout_marginBottom="12dp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Entry Fee:"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/cairo_medium"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/tv_detail_fee"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/cairo_medium"
+                    android:textColor="#4CAF50"
+                    android:text="$0.00" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" Duration:"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/cairo_medium"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:id="@+id/tv_detail_duration"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/cairo_medium"
+                    android:textColor="#B2EBF2"
+                    android:text="0 hours" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- Rating Section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="#33FFFFFF"
+            android:padding="12dp"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="12dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=" Rating:"
+                android:textSize="18sp"
+                android:fontFamily="@font/cairo_medium"
+                android:textColor="@color/white"
+                android:layout_marginEnd="12dp" />
+
+            <TextView
+                android:id="@+id/tv_detail_rating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="22sp"
+                android:text="⭐⭐⭐⭐⭐" />
+        </LinearLayout>
+
+        <!-- Status Section (Favorite & Visited) -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="#33FFFFFF"
+            android:padding="12dp"
+            android:layout_marginBottom="12dp">
+
+            <TextView
+                android:id="@+id/tv_detail_favorite"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="❤ Favorite"
+                android:textSize="16sp"
+                android:fontFamily="@font/cairo_medium"
+                android:textColor="#FFD700"
+                android:gravity="center"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tv_detail_visited"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text=" Visited"
+                android:textSize="16sp"
+                android:fontFamily="@font/cairo_medium"
+                android:textColor="#4CAF50"
+                android:gravity="center"
+                android:visibility="gone" />
+        </LinearLayout>
+
+        <!-- Notes Section -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=" Notes:"
+            android:textSize="18sp"
+            android:fontFamily="@font/cairo_medium"
+            android:textColor="@color/white"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:id="@+id/tv_detail_notes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="80dp"
+            android:background="#33FFFFFF"
+            android:padding="12dp"
+            android:textSize="16sp"
+            android:fontFamily="@font/cairo_medium"
+            android:textColor="#B2EBF2"
+            android:text="No notes available"
+            android:layout_marginBottom="24dp" />
+
+        <!-- Action Buttons -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="16dp">
+
+            <Button
+                android:id="@+id/btn_detail_edit"
+                android:layout_width="0dp"
+                android:layout_height="56dp"
+                android:layout_weight="1"
+                android:text="Edit"
+                android:textSize="18sp"
+                android:fontFamily="@font/cairo_medium"
+                android:textColor="@color/white"
+                android:backgroundTint="@color/Buttons"
+                android:textAllCaps="false"
+                android:layout_marginEnd="8dp" />
+
+            <Button
+                android:id="@+id/btn_detail_delete"
+                android:layout_width="0dp"
+                android:layout_height="56dp"
+                android:layout_weight="1"
+                android:text=" Delete"
+                android:textSize="18sp"
+                android:fontFamily="@font/cairo_medium"
+                android:textColor="@color/white"
+                android:backgroundTint="#F44336"
+                android:textAllCaps="false"
+                android:layout_marginStart="8dp" />
+        </LinearLayout>
+
+        <!-- Back Button -->
+        <Button
+            android:id="@+id/btn_detail_back"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:text="← Back"
+            android:textSize="18sp"
+            android:fontFamily="@font/cairo_medium"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/Buttons"
+            android:textAllCaps="false"
+            android:layout_marginTop="8dp" />
+
+    </LinearLayout>
+
+</ScrollView>
