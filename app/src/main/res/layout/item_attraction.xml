@@ -9,7 +9,7 @@
     android:foreground="?android:attr/selectableItemBackground"
     app:cardCornerRadius="8dp"
     app:cardElevation="4dp"
-    app:cardBackgroundColor="#57578A">
+    app:cardBackgroundColor="#3A1919">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -39,7 +39,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text=" "
+                android:text="📍 "
                 android:textSize="16sp" />
 
             <TextView
@@ -64,15 +64,15 @@
                 android:id="@+id/attraction_type"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="14sp"
+                android:textSize="20sp"
                 android:text="Type"
                 android:fontFamily="@font/cairo_medium"
-                android:textColor="@color/white"
+                android:textColor="@color/Buttons"
                 android:paddingStart="8dp"
                 android:paddingEnd="8dp"
                 android:paddingTop="4dp"
                 android:paddingBottom="4dp"
-                android:background="@color/Buttons" />
+                android:background="#DDE4BD" />
 
             <View
                 android:layout_width="0dp"

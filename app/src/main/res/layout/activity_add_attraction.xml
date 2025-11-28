@@ -16,7 +16,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Attraction Name"
-            android:textSize="20sp"
+            android:textSize="20dp"
             android:fontFamily="@font/cairo_medium"
             android:textColor="@color/white"
             android:letterSpacing="0.01"
@@ -30,7 +30,7 @@
             android:fontFamily="@font/cairo_medium"
             android:textColor="@color/white"
             android:textColorHint="#B2EBF2"
-            android:textSize="20sp"
+            android:textSize="20dp"
             android:paddingStart="12dp"
             android:paddingEnd="12dp"
             android:layout_marginBottom="20dp" />
@@ -40,7 +40,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Location"
-            android:textSize="20sp"
+            android:textSize="20dp"
             android:fontFamily="@font/cairo_medium"
             android:textColor="@color/white"
             android:letterSpacing="0.01"
@@ -54,7 +54,7 @@
             android:fontFamily="@font/cairo_medium"
             android:textColor="@color/white"
             android:textColorHint="#B2EBF2"
-            android:textSize="20sp"
+            android:textSize="20dp"
             android:paddingStart="12dp"
             android:paddingEnd="12dp"
             android:layout_marginBottom="20dp" />
@@ -64,7 +64,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Type"
-            android:textSize="20sp"
+            android:textSize="20dp"
             android:fontFamily="@font/cairo_medium"
             android:textColor="@color/white"
             android:letterSpacing="0.01"
@@ -76,8 +76,10 @@
             android:layout_height="48dp"
             android:paddingStart="12dp"
             android:paddingEnd="12dp"
+            android:textColor="@color/white"
             android:fontFamily="@font/cairo_medium"
-            android:layout_marginBottom="20dp" />
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/spinner_background"/>
 
         <!-- Entry Fee -->
         <TextView
@@ -86,7 +88,7 @@
             android:text="Entry Fee ($)"
             android:fontFamily="@font/cairo_medium"
             android:textColor="@color/white"
-            android:textSize="20sp"
+            android:textSize="20dp"
             android:letterSpacing="0.01"
             android:layout_marginBottom="8dp" />
 
@@ -98,7 +100,7 @@
             android:fontFamily="@font/cairo_medium"
             android:textColor="@color/white"
             android:textColorHint="#B2EBF2"
-            android:textSize="20sp"
+            android:textSize="20dp"
             android:paddingStart="12dp"
             android:paddingEnd="12dp"
             android:inputType="numberDecimal"
@@ -111,7 +113,7 @@
             android:text="Visit Date"
             android:fontFamily="@font/cairo_medium"
             android:textColor="@color/white"
-            android:textSize="20sp"
+            android:textSize="20dp"
             android:letterSpacing="0.01"
             android:layout_marginBottom="8dp" />
 
@@ -122,7 +124,7 @@
             android:text="Select Date"
             android:fontFamily="@font/cairo_medium"
             android:textColor="@color/white"
-            android:textSize="20sp"
+            android:textSize="20dp"
             android:textAllCaps="false"
             android:backgroundTint="@color/Buttons"
             android:layout_marginBottom="8dp" />
@@ -134,7 +136,7 @@
             android:text="No date selected"
             android:fontFamily="@font/cairo_medium"
             android:textColor="#B2EBF2"
-            android:textSize="20sp"
+            android:textSize="20dp"
             android:layout_marginBottom="20dp" />
 
         <!-- Time -->
@@ -144,7 +146,7 @@
             android:text="Visit Time"
             android:fontFamily="@font/cairo_medium"
             android:textColor="@color/white"
-            android:textSize="20sp"
+            android:textSize="20dp"
             android:letterSpacing="0.01"
             android:layout_marginBottom="8dp" />
 
@@ -155,7 +157,7 @@
             android:text="Select Time"
             android:fontFamily="@font/cairo_medium"
             android:textColor="@color/white"
-            android:textSize="20sp"
+            android:textSize="20dp"
             android:textAllCaps="false"
             android:backgroundTint="@color/Buttons"
             android:layout_marginBottom="8dp" />
@@ -167,7 +169,7 @@
             android:text="No time selected"
             android:fontFamily="@font/cairo_medium"
             android:textColor="#B2EBF2"
-            android:textSize="20sp"
+            android:textSize="20dp"
             android:layout_marginBottom="20dp" />
 
         <!-- Duration -->
@@ -177,7 +179,7 @@
             android:text="Duration (hours)"
             android:fontFamily="@font/cairo_medium"
             android:textColor="@color/white"
-            android:textSize="20sp"
+            android:textSize="20dp"
             android:letterSpacing="0.01"
             android:layout_marginBottom="8dp" />
 
@@ -189,7 +191,7 @@
             android:fontFamily="@font/cairo_medium"
             android:textColor="@color/white"
             android:textColorHint="#B2EBF2"
-            android:textSize="20sp"
+            android:textSize="20dp"
             android:paddingStart="12dp"
             android:paddingEnd="12dp"
             android:inputType="number"
@@ -202,7 +204,7 @@
             android:text="Rating"
             android:fontFamily="@font/cairo_medium"
             android:textColor="@color/white"
-            android:textSize="20sp"
+            android:textSize="20dp"
             android:letterSpacing="0.01"
             android:layout_marginBottom="12dp" />
 
@@ -219,7 +221,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="⭐"
-                android:textSize="20sp"
+                android:textSize="20dp"
                 android:fontFamily="@font/cairo_medium"
                 android:textColor="@color/white"
                 />
@@ -230,10 +232,10 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="⭐⭐"
-                android:textSize="20sp"
+                android:textSize="20dp"
                 android:fontFamily="@font/cairo_medium"
                 android:textColor="@color/white"
-                 />
+                />
 
             <RadioButton
                 android:id="@+id/rb_3star"
@@ -241,10 +243,10 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="⭐⭐⭐"
-                android:textSize="20sp"
+                android:textSize="20dp"
                 android:fontFamily="@font/cairo_medium"
                 android:textColor="@color/white"
-                 />
+                />
 
             <RadioButton
                 android:id="@+id/rb_4star"
@@ -252,10 +254,10 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="⭐⭐⭐⭐"
-                android:textSize="20sp"
+                android:textSize="20dp"
                 android:fontFamily="@font/cairo_medium"
                 android:textColor="@color/white"
-                 />
+                />
 
             <RadioButton
                 android:id="@+id/rb_5star"
@@ -263,10 +265,10 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="⭐⭐⭐⭐⭐"
-                android:textSize="20sp"
+                android:textSize="20dp"
                 android:fontFamily="sans-serif"
                 android:textColor="@color/white"
-                 />
+                />
 
         </RadioGroup>
 
@@ -278,8 +280,7 @@
             android:text="Mark as Favorite"
             android:fontFamily="@font/cairo_medium"
             android:textColor="@color/white"
-            android:textSize="20sp"
-
+            android:textSize="20dp"
             android:layout_marginBottom="12dp" />
 
         <CheckBox
@@ -289,8 +290,7 @@
             android:text="Already Visited"
             android:fontFamily="@font/cairo_medium"
             android:textColor="@color/white"
-            android:textSize="20sp"
-
+            android:textSize="20dp"
             android:layout_marginBottom="20dp" />
 
         <!-- Notes -->
@@ -300,7 +300,7 @@
             android:text="Notes"
             android:fontFamily="@font/cairo_medium"
             android:textColor="@color/white"
-            android:textSize="20sp"
+            android:textSize="20dp"
             android:letterSpacing="0.01"
             android:layout_marginBottom="8dp" />
 
@@ -312,7 +312,7 @@
             android:fontFamily="@font/cairo_medium"
             android:textColor="@color/white"
             android:textColorHint="#B2EBF2"
-            android:textSize="20sp"
+            android:textSize="20dp"
             android:padding="12dp"
             android:gravity="top|start"
             android:layout_marginBottom="24dp" />
@@ -333,7 +333,7 @@
                 android:layout_marginEnd="8dp"
                 android:fontFamily="@font/cairo_medium"
                 android:textColor="@color/white"
-                android:textSize="20sp"
+                android:textSize="20dp"
                 android:backgroundTint="@color/Buttons"
                 android:textAllCaps="false"
                 />
@@ -348,10 +348,9 @@
                 android:fontFamily="@font/cairo_medium"
                 android:textColor="@color/white"
                 android:backgroundTint="@color/Buttons"
-                android:textSize="20sp"
+                android:textSize="20dp"
                 android:textAllCaps="false"
-            />
-
+                />
 
         </LinearLayout>
 
