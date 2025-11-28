@@ -36,7 +36,8 @@ Each attraction includes:
 
 ### Data Management
 - **SharedPreferencesManager**: Handles all data persistence using Android SharedPreferences
-- **No external libraries**: Pure Android implementation without Gson or Room
+- **No external libraries**: Pure Android implementation without Gson
+- 
 
 ### Adapter
 - **AttractionAdapter**: RecyclerView adapter for displaying attraction cards
