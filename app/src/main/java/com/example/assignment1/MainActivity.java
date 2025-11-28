@@ -2,6 +2,7 @@ package com.example.assignment1;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.Button;
 import android.widget.SearchView;
 import android.widget.TextView;
@@ -17,6 +18,7 @@ public class MainActivity extends AppCompatActivity implements AttractionAdapter
     private SearchView searchView;
     private TextView emptyMessage;
     private Button btnAdd;
+    private static final String TAG = "MainActivity";
 
     private SharedPreferencesManager manager;
     private List<Attraction> allAttractions;
@@ -51,6 +53,8 @@ public class MainActivity extends AppCompatActivity implements AttractionAdapter
 
         // Load attractions
         loadAttractions();
+
+        Log.d(TAG,"on onCreate() State");
     }
 
     private void setupRecyclerView() {
@@ -111,9 +115,35 @@ public class MainActivity extends AppCompatActivity implements AttractionAdapter
         startActivity(intent);
     }
 
+    public void onStart(){
+        super.onStart();
+        Log.d(TAG,"On OnStart() State");
+    }
+
+
     @Override
     protected void onResume() {
         super.onResume();
         loadAttractions();
+        Log.d(TAG,"on onResume() state");
+    }
+    public void onRestart(){
+        super.onRestart();
+        Log.d(TAG,"On onRestart() State");
+    }
+
+    public void onPause(){
+        super.onPause();
+        Log.d(TAG,"On onPause() State");
+    }
+
+    public void onStop(){
+        super.onStop();
+        Log.d(TAG,"On onStop() State");
+    }
+
+    public void onDestroy(){
+        super.onDestroy();
+        Log.d(TAG,"On onDestroy() State");
     }
 }
