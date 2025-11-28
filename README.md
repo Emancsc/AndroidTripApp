@@ -2,6 +2,10 @@
 
 An Android application for planning and managing tourist attractions. Users can add, edit, search, and organize their favorite destinations with detailed information.
 
+Submission info:
+Eman Alghalban
+1220611
+
 ## 📱 Features
 
 ### Core Functionality
